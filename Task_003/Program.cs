@@ -5,10 +5,10 @@
 45 -> 9
 */
 
-int n = 45;
+int n = 453;
 int SumNumbers(int num)
 {
-    if (num / 10 == 0) return num;
+    if (num == 0) return num;
     else return num % 10 + SumNumbers(num / 10);
 }
 
