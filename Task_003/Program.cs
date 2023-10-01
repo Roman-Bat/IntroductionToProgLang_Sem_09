@@ -5,16 +5,11 @@
 45 -> 9
 */
 
-int n = 8;
-
-// 
-
-string ShowNumbers (int n)
+int n = 45;
+int SumNumbers(int num)
 {
-    if(n == m) return $"{m} ";
-    return ShowNumbers(n - 1) + $"{n} ";
+    if (num / 10 == 0) return num;
+    else return num % 10 + SumNumbers(num / 10);
 }
 
-
-Console.WriteLine();
-Console.WriteLine($"\nНатуральные числа в промежутке от M до N: \n {ShowNumbers(n)}\n")
+Console.WriteLine($"Принимаем число: {n}\nПоразрядная сумма числа: \n {SumNumbers(n)}\n");
