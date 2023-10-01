@@ -4,17 +4,17 @@
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
 */
-int m = 1;
-int n = 3;
+int Sum(int m, int n)
+  {
+    if (m == n) return m;
+    else return Sum(m, n-1) + n;
+  }
+ // Принимаем значения M и N от пользователя
 
-// Метод который выведет все натуральные числа от М до N с помощью рекурсии
+Console.WriteLine("Введите M и N через пробел: ");
+string input = Console.ReadLine();
+string[] values = input.Split(' ');
+int m = Convert.ToInt32(values[0]);
+int n = Convert.ToInt32(values[1]);
 
-string ShowNumbers (int n)
-{
-    if(n == m) return $"{m} ";
-    return ShowNumbers(n - 1) + $"{n} ";
-}
-
-
-Console.WriteLine();
-Console.WriteLine($"\nСумма чисел от M до N: \n {ShowNumbers(n)}\n");
+Console.WriteLine($"Сумма натуральных чисел в диапазоне от {m} до {n} равна {Sum(m, n)}");
